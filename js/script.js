@@ -54,16 +54,19 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener("click", function (e) {
             e.preventDefault();
             const year = this.getAttribute("data-year");
-            // Agora procuramos pelo atributo `year` dentro de cada "timeline-item"
             const target = document.querySelector(`.timeline-item[year="${year}"]`);
 
+            // Adicionar a classe 'active' ao índice selecionado
+            document.querySelectorAll(".timeline-index a").forEach(a => a.classList.remove("active"));
+            this.classList.add("active");
+
             if (target) {
-                // Aumenta a distância de rolagem para parar um pouco mais abaixo
                 window.scrollTo({
-                    top: target.offsetTop + 270,  // Adicionando 150 pixels para descer um pouco mais
+                    top: target.offsetTop + 270,  // Ajuste da rolagem
                     behavior: "smooth"
                 });
             }
         });
     });
+
 });

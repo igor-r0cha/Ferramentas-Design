@@ -243,3 +243,8 @@
     color: #f8c471;
     transform: scale(1.1);
 }
+
+.timeline-index a.active:hover {
+    color: #f8c471;  /* A cor ativa permanece quando passar o mouse */
+    transform: scale(1.2); /* Mantém o tamanho aumentado */
+}
