@@ -63,7 +63,11 @@
     display: flex;
     position: relative;
     transform: translateY(-80px);
+
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
+
 
 .timeline-item:before {
     content: attr(data-text);
@@ -180,13 +184,25 @@
     font-weight: normal;
 }
 
-.demo-footer {
-    padding: 60px 0;
+.footer {
+    background-color: #2C3E50;
+    color: white;
     text-align: center;
+    padding: 30px 10px;
+    font-family: "Pathway Gothic One", sans-serif;
 }
 
-.demo-footer a {
-    color: #999;
-    display: inline-block;
-    font-family: Cardo;
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.footer-info {
+    font-size: 0.85rem;
+    margin: 10px 0;
 }
