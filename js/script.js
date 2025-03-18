@@ -46,3 +46,24 @@
 
 // Inicializa a timeline
 $("#timeline-1").timeline();
+
+
+// INDICE
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".timeline-index a").forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const year = this.getAttribute("data-year");
+            // Agora procuramos pelo atributo `year` dentro de cada "timeline-item"
+            const target = document.querySelector(`.timeline-item[year="${year}"]`);
+
+            if (target) {
+                // Aumenta a distância de rolagem para parar um pouco mais abaixo
+                window.scrollTo({
+                    top: target.offsetTop + 270,  // Adicionando 150 pixels para descer um pouco mais
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});

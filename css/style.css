@@ -18,7 +18,7 @@
 
 .timeline__content-title {
     font-weight: normal;
-    font-size: 66px;
+    font-size: 67px;
     margin: -10px 0 0 0;
     transition: 0.4s;
     padding: 0 10px;
@@ -205,4 +205,41 @@
 .footer-info {
     font-size: 0.85rem;
     margin: 10px 0;
+}
+
+
+/* INDICE */
+.timeline-index {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.timeline-index ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-index li {
+    margin: 8px 0;
+}
+
+.timeline-index a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: block;
+}
+
+.timeline-index a:hover {
+    color: #f8c471;
+    transform: scale(1.1);
 }
